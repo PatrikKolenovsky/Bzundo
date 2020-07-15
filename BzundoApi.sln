@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BzundoApi", "BzundoApi\BzundoApi.csproj", "{EB3BED2D-5EC1-4753-BF29-6CA6C5B92193}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB3BED2D-5EC1-4753-BF29-6CA6C5B92193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB3BED2D-5EC1-4753-BF29-6CA6C5B92193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB3BED2D-5EC1-4753-BF29-6CA6C5B92193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB3BED2D-5EC1-4753-BF29-6CA6C5B92193}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
