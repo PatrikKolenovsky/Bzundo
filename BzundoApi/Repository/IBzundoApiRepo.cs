@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using BzundoApi.Models;
 
 namespace BzundoApi.Repository
 {
     public interface IBzundoApiRepo
     {
-        IEnumerable<Models.BzundoCmd> GetAppCommands();
-        Models.BzundoCmd GetCommandById();
+        IEnumerable<BzundoCmd> GetAppCommands();
+        BzundoCmd GetCommandById();
     }
 }

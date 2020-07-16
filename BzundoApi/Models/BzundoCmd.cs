@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-
-
-namespace BzundoApi.Models
+﻿namespace BzundoApi.Models
 {
     public class BzundoCmd
     {

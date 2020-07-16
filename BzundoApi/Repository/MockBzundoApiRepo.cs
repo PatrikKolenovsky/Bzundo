@@ -5,7 +5,7 @@ namespace BzundoApi.Repository
 {
     public class MockBzundoApiRepo : IBzundoApiRepo
     {
-        public IEnumerable<Models.BzundoCmd> GetAppCommands()
+        public IEnumerable<BzundoCmd> GetAppCommands()
         {
             BzundoCmd cmd1 = new BzundoCmd(0, "Boil an egg", "Boil water", "Kettle");
             BzundoCmd cmd2 = new BzundoCmd(1, "Prepare sausage", "Boil sausage", "Kettle");
@@ -16,8 +16,8 @@ namespace BzundoApi.Repository
             commands.Add(cmd3);
             return commands;
         }
-
-        public Models.BzundoCmd GetCommandById()
+        
+        public BzundoCmd GetCommandById()
         {
             return new BzundoCmd(0, "Boil an egg", "Boil water", "Kettle and pan");
         }
