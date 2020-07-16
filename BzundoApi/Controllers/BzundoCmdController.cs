@@ -10,7 +10,12 @@ namespace BzundoApi.Controllers
     [ApiController]
     public class BzundoCmdController : ControllerBase
     {
-        private readonly MockBzundoApiRepo _repo = new MockBzundoApiRepo();
+        private readonly IBzundoApiRepo _repo;
+        public BzundoCmdController(IBzundoApiRepo repo)
+        {
+            _repo = repo;
+        }
+        
         //GET api/cmd    
         [HttpGet]
         public ActionResult<IEnumerable<BzundoCmd>> GetAllCommands()
