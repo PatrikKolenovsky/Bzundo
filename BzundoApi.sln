@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BzundoApi", "BzundoApi\BzundoApi.csproj", "{EB3BED2D-5EC1-4753-BF29-6CA6C5B92193}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bzundo", "Bzundo\Bzundo.csproj", "{EB3BED2D-5EC1-4753-BF29-6CA6C5B92193}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
