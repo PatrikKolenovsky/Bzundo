@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
 using Bzundo.Repository;
@@ -7,11 +8,11 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using MySqlConnector;
 
 namespace Bzundo
 {
@@ -29,7 +30,9 @@ namespace Bzundo
         {
             services.AddControllers();
             services.AddScoped<IBzundoRepo, MockBzundoRepo>();
-            services.AddTransient(_ => new MySqlDatabase("server=localhost; database=bzundo; uid=root; pwd=root;"));
+            string connectionString = Configuration.GetConnectionString("Default");
+            services.AddDbContext<BzundoContext>(opt =>
+                opt.UseMySql(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

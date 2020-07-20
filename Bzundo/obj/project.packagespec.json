@@ -1,23 +1,23 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\Csharp\\BzundoApi\\Bzundo\\Bzundo.csproj",
+    "projectUniqueName": "D:\\Csharp\\Bzundo\\Bzundo\\Bzundo.csproj",
     "projectName": "Bzundo",
-    "projectPath": "D:\\Csharp\\BzundoApi\\Bzundo\\Bzundo.csproj",
-    "outputPath": "D:\\Csharp\\BzundoApi\\Bzundo\\obj\\",
+    "projectPath": "D:\\Csharp\\Bzundo\\Bzundo\\Bzundo.csproj",
+    "outputPath": "D:\\Csharp\\Bzundo\\Bzundo\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
-      "netcoreapp3.1"
+      "netcoreapp3.0"
     ],
     "sources": {
       "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {
-      "netcoreapp3.1": {
+      "netcoreapp3.0": {
         "projectReferences": {}
       }
     },
@@ -28,23 +28,23 @@
     }
   },
   "frameworks": {
-    "netcoreapp3.1": {
+    "netcoreapp3.0": {
       "dependencies": {
         "Microsoft.EntityFrameworkCore": {
           "target": "Package",
-          "version": "[5.0.0-preview.6.20312.4, )"
+          "version": "[3.1.3, )"
         },
         "Microsoft.EntityFrameworkCore.Design": {
           "target": "Package",
-          "version": "[5.0.0-preview.6.20312.4, )"
+          "version": "[3.1.3, )"
         },
-        "MySql.Data": {
+        "Pomelo.EntityFrameworkCore.MySql": {
           "target": "Package",
-          "version": "[8.0.21, )"
+          "version": "[3.1.1, )"
         },
-        "MySqlConnector": {
+        "Pomelo.EntityFrameworkCore.MySql.Design": {
           "target": "Package",
-          "version": "[1.0.0, )"
+          "version": "[1.1.2, )"
         }
       },
       "imports": [

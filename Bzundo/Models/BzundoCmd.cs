@@ -1,4 +1,4 @@
-﻿namespace Bzundo.Models
+﻿﻿namespace Bzundo.Models
 {
     public class BzundoCmd
     {
