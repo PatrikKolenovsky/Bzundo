@@ -29,7 +29,7 @@ namespace Bzundo
         {
             services.AddControllers();
             services.AddScoped<IBzundoRepo, MockBzundoRepo>();
-            services.AddTransient<MySqlDatabase>(_ => new MySqlDatabase("server=localhost; database=bzundo; uid=root; pwd=root;"));
+            services.AddTransient(_ => new MySqlDatabase("server=localhost; database=bzundo; uid=root; pwd=root;"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
