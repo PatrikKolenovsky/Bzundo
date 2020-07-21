@@ -46,3 +46,5 @@ D:\Csharp\Bzundo\Bzundo\bin\Debug\netcoreapp3.0\Microsoft.Bcl.AsyncInterfaces.dl
 D:\Csharp\Bzundo\Bzundo\bin\Debug\netcoreapp3.0\Microsoft.Bcl.HashCode.dll
 D:\Csharp\Bzundo\Bzundo\obj\Debug\netcoreapp3.0\Bzundo.csproj.CoreCompileInputs.cache
 D:\Csharp\Bzundo\Bzundo\obj\Debug\netcoreapp3.0\Bzundo.genruntimeconfig.cache
+D:\Csharp\Bzundo\Bzundo\bin\Debug\netcoreapp3.0\AutoMapper.dll
+D:\Csharp\Bzundo\Bzundo\bin\Debug\netcoreapp3.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

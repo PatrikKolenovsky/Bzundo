@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using AutoMapper;
+using Bzundo.DTOS;
 using Microsoft.AspNetCore.Mvc;
 using dto = Bzundo.Models;
 using Bzundo.Models;
@@ -11,10 +13,12 @@ namespace Bzundo.Controllers
     public class BzundoCmdController : ControllerBase
     {
         private readonly IBzundoRepo _repo;
+        private readonly IMapper _mapper;
 
-        public BzundoCmdController(IBzundoRepo repo)
+        public BzundoCmdController(IBzundoRepo repo, IMapper mapper)
         {
             _repo = repo;
+            _mapper = mapper;
         }
 
         //GET api/cmd    
@@ -27,19 +31,14 @@ namespace Bzundo.Controllers
 
         //GET api/cmd/{id}
         [HttpGet("{id}")]
-        public ActionResult<BzundoCmd> GetCommandById(int id)
+        public ActionResult<CommandReadDto> GetCommandById(int id)
         {
-            // var cmd = MySqlDatabase.Connection.CreateCommand();
-            // cmd.CommandText = @"SELECT * from commands";
-            // MySqlDataReader rdr = cmd.ExecuteReader();
-            // string ret = "";
-            // while (rdr.Read())
-            // {
-            //     ret = String.Concat(ret, (rdr[0] + " -- " + rdr[1]));
-            // }
-            //
-            // rdr.Close();
-            return Ok(1);
+            var commandItem = _repo.GetCommandById(id);
+            if (commandItem != null)
+            {
+                return Ok(_mapper.Map<CommandReadDto>(commandItem));
+            }
+            return NotFound();
         }
     }
 }
