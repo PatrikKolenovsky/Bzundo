@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Bzundo.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,10 +30,13 @@ namespace Bzundo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<IBzundoRepo, MockBzundoRepo>();
             string connectionString = Configuration.GetConnectionString("Default");
             services.AddDbContext<BzundoContext>(opt =>
                 opt.UseMySql(connectionString));
+            // services.AddScoped<IBzundoRepo, MockBzundoRepo>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddScoped<IBzundoRepo, SqlCommanderRepo>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
