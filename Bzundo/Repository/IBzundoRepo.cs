@@ -5,7 +5,7 @@ namespace Bzundo.Repository
 {
     public interface IBzundoRepo
     {
-        IEnumerable<BzundoCmd> GetAppCommands();
+        IEnumerable<BzundoCmd> GetAllCommands();
         BzundoCmd GetCommandById();
     }
 }

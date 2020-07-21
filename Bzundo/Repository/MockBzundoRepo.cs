@@ -5,7 +5,7 @@ namespace Bzundo.Repository
 {
     public class MockBzundoRepo : IBzundoRepo
     {
-        public IEnumerable<BzundoCmd> GetAppCommands()
+        public IEnumerable<BzundoCmd> GetAllCommands()
         {
             BzundoCmd cmd1 = new BzundoCmd(0, "Boil an egg", "Boil water", "Kettle");
             BzundoCmd cmd2 = new BzundoCmd(1, "Prepare sausage", "Boil sausage", "Kettle");

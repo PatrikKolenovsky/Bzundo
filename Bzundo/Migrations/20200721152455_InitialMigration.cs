@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Bzundo.Migrations
 {
-    public partial class InitMigration : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,9 +13,9 @@ namespace Bzundo.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    HowTo = table.Column<string>(nullable: true),
-                    Line = table.Column<string>(nullable: true),
-                    Platform = table.Column<string>(nullable: true)
+                    HowTo = table.Column<string>(maxLength: 250, nullable: false),
+                    Line = table.Column<string>(nullable: false),
+                    Platform = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
