@@ -17,7 +17,7 @@ namespace Bzundo.Repository
             return commands;
         }
         
-        public BzundoCmd GetCommandById()
+        public BzundoCmd GetCommandById(int id)
         {
             return new BzundoCmd(0, "Boil an egg", "Boil water", "Kettle and pan");
         }

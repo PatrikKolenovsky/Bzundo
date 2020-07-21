@@ -6,6 +6,6 @@ namespace Bzundo.Repository
     public interface IBzundoRepo
     {
         IEnumerable<BzundoCmd> GetAllCommands();
-        BzundoCmd GetCommandById();
+        BzundoCmd GetCommandById(int id);
     }
 }

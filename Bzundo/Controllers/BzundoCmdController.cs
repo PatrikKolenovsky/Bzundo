@@ -21,7 +21,7 @@ namespace Bzundo.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<BzundoCmd>> GetAllCommands()
         {
-            var cmdItems = _repo.GetAppCommands();
+            var cmdItems = _repo.GetAllCommands();
             return Ok(cmdItems);
         }
 
