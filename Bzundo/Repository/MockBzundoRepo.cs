@@ -5,6 +5,11 @@ namespace Bzundo.Repository
 {
     public class MockBzundoRepo : IBzundoRepo
     {
+        public bool SaveChanges()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public IEnumerable<BzundoCmd> GetAllCommands()
         {
             BzundoCmd cmd1 = new BzundoCmd(0, "Boil an egg", "Boil water", "Kettle");
@@ -20,6 +25,11 @@ namespace Bzundo.Repository
         public BzundoCmd GetCommandById(int id)
         {
             return new BzundoCmd(0, "Boil an egg", "Boil water", "Kettle and pan");
+        }
+
+        public void CreateCommand(BzundoCmd cmd)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
