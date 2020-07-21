@@ -4,13 +4,13 @@
 {
     public class BzundoCmd
     {
-        public BzundoCmd(int id, string howTo, string line, string platform)
-        {
-            Id = id;
-            HowTo = howTo;
-            Line = line;
-            Platform = platform;
-        }
+        // public BzundoCmd(int id, string howTo, string line, string platform)
+        // {
+        //     Id = id;
+        //     HowTo = howTo;
+        //     Line = line;
+        //     Platform = platform;
+        // }
 
         [Key]
         public int Id { get; set; }

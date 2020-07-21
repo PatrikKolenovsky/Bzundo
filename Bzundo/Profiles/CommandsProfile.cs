@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Bzundo.DTOS;
 using Bzundo.Models;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace Bzundo.Profiles
@@ -10,6 +11,7 @@ namespace Bzundo.Profiles
         public CommandsProfile()
         {
             CreateMap<BzundoCmd, CommandReadDto>();
+            CreateMap<CommandCreateDto, BzundoCmd>();
         }
     }
 }

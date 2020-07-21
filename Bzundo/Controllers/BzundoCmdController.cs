@@ -30,7 +30,7 @@ namespace Bzundo.Controllers
         }
 
         //GET api/cmd/{id}
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetCommandById")]
         public ActionResult<CommandReadDto> GetCommandById(int id)
         {
             var commandItem = _repo.GetCommandById(id);
@@ -39,6 +39,20 @@ namespace Bzundo.Controllers
                 return Ok(_mapper.Map<CommandReadDto>(commandItem));
             }
             return NotFound();
+        }
+        
+        //POST api/commands
+        [HttpPost]
+        public ActionResult<CommandReadDto> CreateCommand(CommandCreateDto commandCreateDto)
+        {
+            var commandModel = _mapper.Map<BzundoCmd>(commandCreateDto);
+            _repo.CreateCommand(commandModel);
+            _repo.SaveChanges();
+
+            var commandReadDto = _mapper.Map<CommandReadDto>(commandModel);
+
+            return CreatedAtRoute(nameof(GetCommandById), new {Id = commandReadDto.Id}, commandReadDto);
+            // return Ok(commandReadDto);
         }
     }
 }
