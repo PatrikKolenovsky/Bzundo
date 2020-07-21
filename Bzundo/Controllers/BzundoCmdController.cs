@@ -23,10 +23,10 @@ namespace Bzundo.Controllers
 
         //GET api/cmd    
         [HttpGet]
-        public ActionResult<IEnumerable<BzundoCmd>> GetAllCommands()
+        public ActionResult<IEnumerable<CommandReadDto>> GetAllCommands()
         {
-            var cmdItems = _repo.GetAllCommands();
-            return Ok(cmdItems);
+            var commandItem = _repo.GetAllCommands();
+            return Ok(_mapper.Map<IEnumerable<CommandReadDto>>(commandItem));
         }
 
         //GET api/cmd/{id}
